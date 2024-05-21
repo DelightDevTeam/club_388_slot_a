@@ -7,7 +7,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 by
-                <a href="https://livesportslotmm.netlify.app/" target="_blank" class="font-weight-bold" target="_blank">Live Sport Slot</a>
+                <a href="https://livesportslotmm.netlify.app/" target="_blank" class="font-weight-bold" target="_blank">Club388Slot</a>
               </div>
             </div>
             {{-- <div class="col-lg-6">

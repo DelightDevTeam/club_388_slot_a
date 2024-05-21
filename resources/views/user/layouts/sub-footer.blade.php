@@ -32,6 +32,6 @@
  </div>
 
  <div class="text-center" style="color: #999a9a; padding-bottom: 30px">
-  Copyright © 2023. All rights reserved.
+  Copyright © 2024. All rights reserved.
  </div>
 </div>
