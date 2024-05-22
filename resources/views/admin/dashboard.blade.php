@@ -31,6 +31,7 @@
                 </div>
             </div>
         </div>
+        @can('admin_access')
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body p-3 position-relative">
@@ -47,6 +48,8 @@
                 </div>
             </div>
         </div>
+        @endcan
+        @can('admin_access', 'master_access')
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body p-3 position-relative">
@@ -63,6 +66,7 @@
                 </div>
             </div>
         </div>
+        @endcan
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body p-3 position-relative">

