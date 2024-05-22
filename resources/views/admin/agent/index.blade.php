@@ -62,7 +62,7 @@
               <small class="badge bg-gradient-{{ $user->status == 1 ? 'success' : ($user->status == 2 ? 'danger' : 'warning') }}">{{ $user->status == 1 ? "active" : ($user->status == 2 ? "inactive" : "pending") }}</small>
             
               </td>
-              <td>{{ number_format($user->balanceFloat,2) }} MMK</td>
+              <td>{{ number_format($user->balanceFloat,2) }} </td>
 
               <td>
                 @if ($user->status == 2)
@@ -102,6 +102,10 @@
                 <a href="{{ route('admin.logs', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Agent logs" class="btn btn-info btn-sm">
                   <i class="fas fa-right-left text-white me-1"></i>
                   Logs
+                </a>
+                <a href="{{ route('admin.transferLogDetail', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Reports" class="btn btn-info btn-sm">
+                  <i class="fas fa-right-left text-white me-1"></i>
+                  transferLogs
                 </a>
 
               </td>

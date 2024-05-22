@@ -12,6 +12,7 @@ use App\Settings\AppSetting;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,25 +43,24 @@ class HomeController extends Controller
         $getUserCounts = function ($roleTitle) use ($isAdmin, $user) {
             return User::whereHas('roles', function ($query) use ($roleTitle) {
                 $query->where('title', '=', $roleTitle);
-            })->when(!$isAdmin, function ($query) use ($user) {
+            })->when(! $isAdmin, function ($query) use ($user) {
                 $query->where('agent_id', $user->id);
             })->count();
         };
 
-        $master_count = $getUserCounts('Master');
         $agent_count = $getUserCounts('Agent');
         $player_count = $getUserCounts('Player');
-
-        $provider_balance = (new AppSetting())->provider_initial_balance + SeamlessTransaction::sum("transaction_amount");
+        $master_count = $getUserCounts('Master');
 
         return view('admin.dashboard', compact(
-            'provider_balance',
-            'master_count',
             'agent_count',
             'player_count',
-            'user'
+            'user',
+            'master_count'
         ));
     }
+
+
 
     public function balanceUp(Request $request)
     {

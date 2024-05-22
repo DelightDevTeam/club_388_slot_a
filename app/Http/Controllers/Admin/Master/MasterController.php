@@ -239,20 +239,6 @@ class MasterController extends Controller
         return redirect()->back()->with('success', 'Money fill request submitted successfully!');
     }
 
-    public function getTransferDetail($id)
-    {
-        abort_if(
-            Gate::denies('make_transfer') || !$this->ifChildOfParent(request()->user()->id, $id),
-            Response::HTTP_FORBIDDEN,
-            '403 Forbidden |You cannot  Access this page because you do not have permission'
-        );
-        $transfer_detail = TransferLog::where('from_user_id', $id)
-            ->orWhere('to_user_id', $id)
-            ->get();
-
-        return view('admin.master.transfer_detail', compact('transfer_detail'));
-    }
-
     public function banMaster($id)
     {
         abort_if(

@@ -31,7 +31,7 @@ class GameTypeTableSeeder extends Seeder
                 'name'  => 'Sport Book',
                 'code'  => '3',
                 'order' => '3',
-                'status' => 1,
+                'status' => 0,
                 'img'   => 'sportbook.png'
             ],
             [

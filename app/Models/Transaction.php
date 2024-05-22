@@ -24,7 +24,7 @@ class Transaction extends ModelsTransaction
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'payable_id', 'id');
     }
 
     public function wager()

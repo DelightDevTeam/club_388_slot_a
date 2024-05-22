@@ -13,7 +13,6 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\Agent\AgentController;
 use App\Http\Controllers\Admin\GameTypeProductController;
 use App\Http\Controllers\Admin\GetBetDetailController;
-use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\Master\MasterController;
 use App\Http\Controllers\Admin\Player\PlayerController;
 use App\Http\Controllers\Admin\TransferLog\TransferLogController;
@@ -96,6 +95,7 @@ Route::group([
     Route::post('withdraw/{withdraw}', [WithDrawRequestController::class, 'statusChange'])->name('agent.statusChange');
 
     Route::get('transer-log', [TransferLogController::class, 'index'])->name('transferLog');
+    Route::get('transferlog/{id}', [TransferLogController::class, 'transferLog'])->name('transferLogDetail');
     Route::group(['prefix' => 'report'], function () {
         Route::get('index', [ReportController::class, 'index'])->name('report.index');
         Route::get('index-v2', [ReportController::class, 'indexV2'])->name('report.indexV2');
