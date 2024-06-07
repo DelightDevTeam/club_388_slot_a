@@ -21,22 +21,22 @@ class ProductTableSeeder extends Seeder
             [
                 'code'  => '1001',
                 'name'  => 'Asia Gaming',
-                'order' => 2,
+                'order' => 31,
             ],
             [
                 'code'  => '1002',
                 'name'  => 'Evolution Gaming',
-                'order' => 3,
+                'order' => 28,
             ],
             [
                 'code'  => '1004',
                 'name'  => 'Big Gaming',
-                'order' => 4,
+                'order' => 10,
             ],
             [
                 'code'  => '1007',
                 'name'  => 'PG Soft',
-                'order' => 5,
+                'order' => 3,
             ],
             [
                 'code'  => '1009',
@@ -151,7 +151,7 @@ class ProductTableSeeder extends Seeder
             [
                 'code'  => '1085',
                 'name'  => 'JDB',
-                'order' => 28,
+                'order' => 4,
             ],
             [
                 'code'  => '1086',
@@ -166,7 +166,7 @@ class ProductTableSeeder extends Seeder
             [
                 'code'  => '1091',
                 'name'  => 'Jili',
-                'order' => 31,
+                'order' => 2,
             ],
             [
                 'code'  => '1097',
