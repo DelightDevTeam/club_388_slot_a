@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             BankTableSeeder::class,
             GameTypeTableSeeder::class,
             ProductTableSeeder::class,
-            GameTypeProductTableSeeder::class
+            GameTypeProductTableSeeder::class,
+            HotGameTablesSeeder::class
         ]);
       
     }
