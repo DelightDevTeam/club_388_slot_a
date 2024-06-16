@@ -54,4 +54,11 @@ class GameController extends Controller
 
         return $this->success(GameDetailResource::collection($gameLists), 'Game Detail Successfully');
     }
+
+    public function hotGame()
+    {
+        $gameLists = GameList::all();
+
+        return $this->success(GameDetailResource::collection($gameLists), 'Hot Game List Successfully');
+    }
 }
